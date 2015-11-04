@@ -1,0 +1,18 @@
+<!Doctype html>
+<html >
+<script src= "js/angular14.js"></script>
+<script src ="script.js"></script>
+<body ng-app="myFilterApp">
+<div ng-controller="MyController">
+<br>// Two text boxes, with default values given by controllers
+  Input: <input ng-model="greeting" type="text"><br>
+  <br>
+  Delimiter: <input ng-model="delimiter.symbol" type="text"><br>
+  <br>
+// By default, the input is separted by comma
+    <p>{{greeting.split('').join(',')}} (Default)</p>
+// The input is separated by the delimiter passed dynamically    
+  <p>{{greeting |tokenize}} (With Option)<br></p>
+</div>
+</body>
+</html>
